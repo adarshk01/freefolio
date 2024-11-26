@@ -1,109 +1,191 @@
-import { useState, useEffect, useRef } from "react";
 import pic from "../assets/round.png";
-import { Svg } from "../svg/Svg";
-
+import tech from "../assets/rocket-lunch.svg";
 export function Ldiv() {
-  const [svgCount] = useState(15); // You can adjust this number as needed
-  const svgArray = Array(svgCount).fill(null);
-  const containerRef = useRef<HTMLDivElement>(null);
-  const [containerSize, setContainerSize] = useState({ width: 0, height: 0 });
-
-  useEffect(() => {
-    const updateSize = () => {
-      if (containerRef.current) {
-        setContainerSize({
-          width: containerRef.current.offsetWidth,
-          height: containerRef.current.offsetHeight,
-        });
-      }
-    };
-
-    updateSize();
-    window.addEventListener("resize", updateSize);
-    return () => window.removeEventListener("resize", updateSize);
-  }, []);
-
   return (
-    <div
-      className="auto-rows-fr xl:h-full font-sans relative"
-      ref={containerRef}
-    >
-      <div className=" flex    lg:block">
+    <div className={`auto-rows-fr xl:h-full font-sans relative `}>
+      <div className="    ">
         <div className="lg:flex lg:justify-center relative  p-4 lg:p-0 z-10">
           <img className="lg:h-60 h-20 rounded-2xl  mt-5" src={pic} alt="" />{" "}
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            xmlnsXlink="http://www.w3.org/1999/xlink"
-            className="absolute h-32 w-32 z-30 stroke-amber-600 fill-amber-600 left-28 rotate-45 top-[-20px]"
-            version="1.1"
-            x="0px"
-            y="0px"
-            viewBox="0 0 100 125"
-            enable-background="new 0 0 100 100"
-            xmlSpace="preserve"
-          >
-            <g>
-              <path d="M83.84375,38.8251953c-0.53125,0-1.1035156,0.3574219-1.8476563,1.1572266L72.6132813,46.8125L56.1582031,25.3046875   c-0.2851563-0.4111328-1.0517578-1.1074219-2.1220703-1.1074219c-1.0498047,0-2.1054688,0.6445313-3.1357422,1.9160156   L33.8554688,47.1494141l-17.7841797-9.6416016c-0.2597656-0.1396484-0.5761719-0.1162109-0.8095703,0.0605469   c-0.234375,0.1777344-0.34375,0.4755859-0.2792969,0.7626953l7.8564453,35.03125   c0.0859375,0.3828125,0.4521484,0.6308594,0.8408203,0.578125c9.3212891-1.375,18.2402344-2.0722656,26.5068359-2.0722656   c19.3378906,0,28.8740234,3.8388672,28.96875,3.8779297c0.0917969,0.0380859,0.1884766,0.0566406,0.2861328,0.0566406   c0.1289063,0,0.2578125-0.0332031,0.3720703-0.0996094c0.2011719-0.1142578,0.3378906-0.3164063,0.3701172-0.5458984l4.7958984-34   c0.0673828-0.3994141,0.1728516-1.3867188-0.2978516-1.9433594C84.4707031,38.9628906,84.1728516,38.8251953,83.84375,38.8251953z    M83.4980469,40.9277344L78.828125,74.0273438c-2.8056641-0.9628906-12.1298828-3.6591797-28.6416016-3.6591797   c-8.1357422,0-16.8916016,0.6689453-26.0361328,1.9873047l-7.34375-32.7431641l16.8818359,9.1523438   c0.3173828,0.1728516,0.7128906,0.09375,0.9404297-0.1865234l17.4375-21.5205078   c0.7207031-0.8896484,1.4023438-1.3603516,1.9697266-1.3603516c0.5439453,0,0.8798828,0.4492188,0.9091797,0.4902344   l16.921875,22.1181641c0.2480469,0.3222656,0.7070313,0.3916016,1.0371094,0.1503906l10.0341797-7.3037109   c0.0400391-0.0292969,0.0771484-0.0625,0.1113281-0.0996094c0.2001953-0.2177734,0.3603516-0.3720703,0.4833984-0.4804688   C83.5283203,40.6894531,83.5166016,40.8134766,83.4980469,40.9277344z" />
-              <path d="M76.2900391,69.5839844c-21.8408203-5.6972656-39.6669922-2.0576172-39.84375-2.0195313   c-0.4052734,0.0849609-0.6650391,0.4824219-0.5791016,0.8876953c0.0849609,0.40625,0.4873047,0.6630859,0.8876953,0.5800781   c0.1738281-0.0390625,17.6777344-3.5986328,39.15625,2.0029297c0.0634766,0.0166016,0.1269531,0.0244141,0.1904297,0.0244141   c0.3330078,0,0.6367188-0.2236328,0.7246094-0.5605469C76.9306641,70.0976563,76.6904297,69.6884766,76.2900391,69.5839844z" />
-              <path d="M62.8271484,42.6464844c0.1474609,0.1953125,0.3710938,0.2978516,0.5986328,0.2978516   c0.1572266,0,0.3164063-0.0498047,0.4511719-0.1523438c0.3310547-0.25,0.3955078-0.7197266,0.1455078-1.0498047L59.625,35.9306641   c-0.2490234-0.3310547-0.7197266-0.3974609-1.0498047-0.1455078c-0.3310547,0.25-0.3955078,0.7197266-0.1455078,1.0498047   L62.8271484,42.6464844z" />
-              <path d="M56.2822266,60.6953125c3.0302734,0,5.4238281-3.5224609,5.6923828-8.3769531   c0.203125-3.6923828-0.9667969-5.75-1.984375-6.8251953c-0.9970703-1.0537109-2.3144531-1.6337891-3.7080078-1.6337891   c-1.2402344,0-2.5664063,0.6064453-3.6376953,1.6630859c-0.2949219,0.2910156-0.2988281,0.765625-0.0078125,1.0605469   c0.2900391,0.2958984,0.7666016,0.2978516,1.0605469,0.0078125c0.7939453-0.7822266,1.7353516-1.2314453,2.5849609-1.2314453   c0.9912109,0,1.8964844,0.4033203,2.6181641,1.1650391c1.1523438,1.2177734,1.7119141,3.2460938,1.5761719,5.7119141   c-0.21875,3.9667969-2.0224609,6.9589844-4.1943359,6.9589844c-1.9121094,0-3.1708984-2.1152344-4.2099609-7.0712891   c-0.1728516-0.8271484-0.1777344-1.65625-0.0146484-2.4667969c0.0820313-0.4052734-0.1816406-0.8007813-0.5878906-0.8828125   c-0.4091797-0.0820313-0.8017578,0.1816406-0.8828125,0.5878906c-0.203125,1.0097656-0.1972656,2.0419922,0.0166016,3.0693359   C51.5039063,56.7236328,52.8144531,60.6953125,56.2822266,60.6953125z" />
-              <path d="M58.2490234,50.7373047C58.2949219,50.7460938,58.3417969,50.75,58.3876953,50.75   c0.3535156,0,0.6689453-0.2509766,0.7363281-0.6123047c0.2958984-1.578125-0.7871094-2.6347656-1.4726563-3.0107422   c-0.3642578-0.1982422-0.8193359-0.0644531-1.0185547,0.2978516c-0.1982422,0.3632813-0.0654297,0.8193359,0.2978516,1.0185547   c0.0087891,0.0048828,0.8916016,0.4990234,0.71875,1.4189453C57.5732422,50.2685547,57.8417969,50.6611328,58.2490234,50.7373047z" />
-            </g>
-          </svg>
         </div>
-        <div className="flex justify-center items-center">
-          <div>
-            <div className="lg:flex lg:justify-center mt-5  lg:text-3xl font-bold z-20 ">
-              ADARSH KAMBLE
-            </div>
-            <div className="bg-rose-1050 lg:mx-18 flex justify-center mt-4 rounded-lg text-xs py-1.5 lg:px-4  whitespace-nowrap">
-              Web developer
-            </div>
-          </div>
+
+        <div className="  mt-5  lg:text-3xl font-bold z-20    ">
+          ADARSH KAMBLE
         </div>
       </div>
-      {containerSize.width > 0 &&
-        containerSize.height > 0 &&
-        svgArray.map((_, index) => (
-          <div
-            key={index}
-            className="absolute pointer-events-none"
-            style={{
-              left: `${Math.random() * containerSize.width + 10}px`,
-              top: `${Math.random() * containerSize.height + 300}px`,
-              transform: `rotate(${Math.random() * 360}deg) scale(${
-                0.3 + Math.random() * 0.8
-              })`,
-              opacity: 0.5 + Math.random() * 0.5,
-              animation: `float ${
-                5 + Math.random() * 10
-              }s infinite ease-in-out`,
-              width: "24px",
-              height: "24px",
-            }}
+      <div className="mt-28 flex justify-center font-semibold text-zinc-500 text-base text-center text-pretty">
+        Crafting solutions through code, turning challenges into seamless
+        experiences.
+      </div>
+      <div className="flex justify-center gap-5">
+        <div className="mt-10 mb-8 hover:bg-zinc-200 hover:rounded-lg h-8 w-8 flex justify-center items-center cursor-pointer transition-all duration-500 ease-in-out">
+          <a href="https://www.instagram.com/adarshkamble01/" target="_blank">
+            <svg
+              version="1.1"
+              id="Layer_1"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlnsXlink="http://www.w3.org/1999/xlink"
+              x="0px"
+              y="0px"
+              viewBox="0 0 56.7 56.7"
+              enableBackground="new 0 0 56.7 56.7"
+              xmlSpace="preserve"
+              className="h-[22px] w-[22px] stroke-orange-500  text-[#9f9f9f] fill-orange-500   "
+            >
+              <g>
+                <path
+                  d="M28.2,16.7c-7,0-12.8,5.7-12.8,12.8s5.7,12.8,12.8,12.8S41,36.5,41,29.5S35.2,16.7,28.2,16.7z M28.2,37.7
+		c-4.5,0-8.2-3.7-8.2-8.2s3.7-8.2,8.2-8.2s8.2,3.7,8.2,8.2S32.7,37.7,28.2,37.7z"
+                />
+                <circle cx="41.5" cy="16.4" r="2.9" />
+                <path
+                  d="M49,8.9c-2.6-2.7-6.3-4.1-10.5-4.1H17.9c-8.7,0-14.5,5.8-14.5,14.5v20.5c0,4.3,1.4,8,4.2,10.7c2.7,2.6,6.3,3.9,10.4,3.9
+		h20.4c4.3,0,7.9-1.4,10.5-3.9c2.7-2.6,4.1-6.3,4.1-10.6V19.3C53,15.1,51.6,11.5,49,8.9z M48.6,39.9c0,3.1-1.1,5.6-2.9,7.3
+		s-4.3,2.6-7.3,2.6H18c-3,0-5.5-0.9-7.3-2.6C8.9,45.4,8,42.9,8,39.8V19.3c0-3,0.9-5.5,2.7-7.3c1.7-1.7,4.3-2.6,7.3-2.6h20.6
+		c3,0,5.5,0.9,7.3,2.7c1.7,1.8,2.7,4.3,2.7,7.2V39.9L48.6,39.9z"
+                />
+              </g>
+            </svg>
+          </a>
+        </div>
+
+        <div className="mt-[40px] mb-8 hover:bg-zinc-200 hover:rounded-lg h-8 w-8 flex justify-center items-center cursor-pointer transition-all duration-500 ease-in-out">
+          <a href="https://x.com/adarsh_k01" target="_blank">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="1200"
+              height="1227"
+              viewBox="0 0 1200 1227"
+              fill="none"
+              className="h-[18px] w-[18px] stroke-orange-500  text-[#9f9f9f] fill-orange-500  cursor-pointer  "
+            >
+              <g clipPath="url(#clip0_1_2)">
+                <path
+                  d="M714.163 519.284L1160.89 0H1055.03L667.137 450.887L357.328 0H0L468.492 681.821L0 1226.37H105.866L515.491 750.218L842.672 1226.37H1200L714.137 519.284H714.163ZM569.165 687.828L521.697 619.934L144.011 79.6944H306.615L611.412 515.685L658.88 583.579L1055.08 1150.3H892.476L569.165 687.854V687.828Z"
+                  fill="[#9f9f9f]"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_1_2">
+                  <rect width="1200" height="1227" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+          </a>
+        </div>
+        <div className="mt-10 mb-8 hover:bg-zinc-200 hover:rounded-lg h-8 w-8 flex justify-center items-center cursor-pointer transition-all duration-500 ease-in-out">
+          <a
+            href="https://www.linkedin.com/in/adarsh-kamble-98ba6b18a/"
+            target="_blank"
           >
-            {Svg.x}
+            <svg
+              enableBackground="new 0 0 56.693 56.693"
+              height="56.693px"
+              id="Layer_1"
+              version="1.1"
+              viewBox="0 0 56.693 56.693"
+              width="56.693px"
+              xmlSpace="preserve"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlnsXlink="http://www.w3.org/1999/xlink"
+              className="h-[22px] w-[22px] stroke-orange-500  text-[#9f9f9f] fill-orange-500 cursor-pointer  "
+            >
+              <g>
+                <path d="M30.071,27.101v-0.077c-0.016,0.026-0.033,0.052-0.05,0.077H30.071z" />
+                <path d="M49.265,4.667H7.145c-2.016,0-3.651,1.596-3.651,3.563v42.613c0,1.966,1.635,3.562,3.651,3.562h42.12   c2.019,0,3.654-1.597,3.654-3.562V8.23C52.919,6.262,51.283,4.667,49.265,4.667z M18.475,46.304h-7.465V23.845h7.465V46.304z    M14.743,20.777h-0.05c-2.504,0-4.124-1.725-4.124-3.88c0-2.203,1.67-3.88,4.223-3.88c2.554,0,4.125,1.677,4.175,3.88   C18.967,19.052,17.345,20.777,14.743,20.777z M45.394,46.304h-7.465V34.286c0-3.018-1.08-5.078-3.781-5.078   c-2.062,0-3.29,1.389-3.831,2.731c-0.197,0.479-0.245,1.149-0.245,1.821v12.543h-7.465c0,0,0.098-20.354,0-22.459h7.465v3.179   c0.992-1.53,2.766-3.709,6.729-3.709c4.911,0,8.594,3.211,8.594,10.11V46.304z" />
+              </g>
+            </svg>
+          </a>
+        </div>
+        <div className="mt-10 mb-8 hover:bg-zinc-200 hover:rounded-lg h-8 w-8 flex justify-center items-center cursor-pointer transition-all duration-500 ease-in-out">
+          <a href="https://github.com/adarshk01" target="_blank">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              x="0px"
+              y="0px"
+              width="28"
+              height="28"
+              viewBox="0 0 24 24"
+              className="stroke-orange-500 fill-orange-500"
+            >
+              <path d="M10.9,2.1c-4.6,0.5-8.3,4.2-8.8,8.7c-0.5,4.7,2.2,8.9,6.3,10.5C8.7,21.4,9,21.2,9,20.8v-1.6c0,0-0.4,0.1-0.9,0.1 c-1.4,0-2-1.2-2.1-1.9c-0.1-0.4-0.3-0.7-0.6-1C5.1,16.3,5,16.3,5,16.2C5,16,5.3,16,5.4,16c0.6,0,1.1,0.7,1.3,1c0.5,0.8,1.1,1,1.4,1 c0.4,0,0.7-0.1,0.9-0.2c0.1-0.7,0.4-1.4,1-1.8c-2.3-0.5-4-1.8-4-4c0-1.1,0.5-2.2,1.2-3C7.1,8.8,7,8.3,7,7.6C7,7.2,7,6.6,7.3,6 c0,0,1.4,0,2.8,1.3C10.6,7.1,11.3,7,12,7s1.4,0.1,2,0.3C15.3,6,16.8,6,16.8,6C17,6.6,17,7.2,17,7.6c0,0.8-0.1,1.2-0.2,1.4 c0.7,0.8,1.2,1.8,1.2,3c0,2.2-1.7,3.5-4,4c0.6,0.5,1,1.4,1,2.3v2.6c0,0.3,0.3,0.6,0.7,0.5c3.7-1.5,6.3-5.1,6.3-9.3 C22,6.1,16.9,1.4,10.9,2.1z"></path>
+            </svg>
+          </a>
+        </div>
+        <div>
+          <svg
+            className="w-32 h-32 absolute  top-80 -left-10 stroke-orange-500  -rotate-[25deg] scale-x-[-1] "
+            viewBox="0 0 106 67"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M0.746735 34.5184C12.2021 40.1368 19.6014 41.495 29.6823 33.0404C36.0718 27.6817 42.1501 19.6964 45.0862 11.851C46.7881 7.30351 40.6898 12.0318 39.6346 13.0432C27.4261 24.7444 22.6035 43.8023 31.4757 58.851C37.2579 68.6586 47.5163 67.3307 56.3712 62.5164C69.8751 55.1746 77.5257 39.8696 80.2223 25.2514C81.1193 20.3886 84.6829 5.82289 78.8378 2.65785C73.9949 0.0354855 72.0976 9.61317 71.6643 12.5431C71.0465 16.7204 70.0313 25.7894 73.1645 29.1607C77.6582 33.9957 86.6118 27.5772 89.8445 24.3227C95.9834 18.1424 100.46 9.32842 104.943 1.91147C105.273 1.36535 101.764 3.3297 101.147 3.66784C99.3793 4.63577 97.2951 4.84168 95.6089 5.96364C94.3579 6.79605 88.7443 12.6083 93.6037 10.5208C95.3164 9.785 103.323 1.07071 103.701 1.3055C105.246 2.26341 104.699 13.9403 104.581 16.0977C104.296 21.2928 97.1835 12.0461 96.4366 10.6636"
+              stroke="stroke-orange-500"
+              strokeWidth="2"
+              strokeLinecap="round"
+            />
+          </svg>
+          <div className=" absolute top-[328px] left-[72px] h-9 w-9 bg-orange-500 rounded-full flex justify-center items-center">
+            <img src={tech} alt="" className="" />
           </div>
-        ))}
-      <style>{`
-        @keyframes float {
-          0%, 100% { transform: translate(0, 0) rotate(0deg); }
-          25% { transform: translate(${Math.random() * 20 - 10}px, ${
-        Math.random() * 20 - 10
-      }px) rotate(${Math.random() * 20 - 10}deg); }
-          50% { transform: translate(${Math.random() * 40 - 20}px, ${
-        Math.random() * 40 - 20
-      }px) rotate(${Math.random() * 40 - 20}deg); }
-          75% { transform: translate(${Math.random() * 40 - 10}px, ${
-        Math.random() * 20 - 10
-      }px) rotate(${Math.random() * 20 - 10}deg); }
-        }
-        @media (prefers-reduced-motion: reduce) {
-          .animate-float {
-            animation: none;
-          }
-        }
-      `}</style>
+
+          <svg
+            className=" w-24 h-24  absolute -top-1 -left-6 stroke-amber-500"
+            viewBox="0 0 82 84"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M41.5816 1.21606C39.7862 5.82482 40.3852 10.0977 40.5593 14.9633C40.7854 21.2812 40.9774 27.5593 41.4363 33.8661"
+              stroke="stroke-amber-500"
+              stroke-width="1.90596"
+              stroke-linecap="round"
+            />
+            <path
+              d="M41.0651 45.1798C39.7505 51.5096 40.3418 57.6794 40.8893 64.0791C41.4093 70.1568 42.1389 76.2117 42.8566 82.2682"
+              stroke="stroke-amber-500"
+              stroke-width="1.90596"
+              stroke-linecap="round"
+            />
+            <path
+              d="M1.13413 46.6647C5.16696 44.8703 8.96881 44.7974 13.3092 44.5029C19.8761 44.0572 26.2025 43.2089 32.656 41.952"
+              stroke="stroke-amber-500"
+              stroke-width="1.90596"
+              stroke-linecap="round"
+            />
+            <path
+              d="M47.2629 40.0959C58.4139 39.3819 69.3895 37.5305 80.4472 35.9965"
+              stroke="stroke-amber-500"
+              stroke-width="1.90596"
+              stroke-linecap="round"
+            />
+            <path
+              d="M49.3429 34.6508L52.917 28.1667"
+              stroke="stroke-amber-500"
+              stroke-width="1.90596"
+              stroke-linecap="round"
+            />
+            <path
+              d="M32.9786 50.3504L28.6387 54.6391"
+              stroke="stroke-amber-500"
+              stroke-width="1.90596"
+              stroke-linecap="round"
+            />
+            <path
+              d="M52.6361 48.6656L56.9506 51.5758"
+              stroke="stroke-amber-500"
+              stroke-width="1.90596"
+              stroke-linecap="round"
+            />
+            <path
+              d="M31.549 30.8471C26.8741 29.4323 22.7143 27.3543 18.2738 25.3586"
+              stroke="stroke-amber-500"
+              stroke-width="1.90596"
+              stroke-linecap="round"
+            />
+          </svg>
+        </div>
+      </div>
     </div>
   );
 }
