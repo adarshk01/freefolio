@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import { Home } from "./Home";
 import { Projects } from "./Projects";
 import { Experience } from "./Experience";
+import { Skills } from "./Skills";
+import { Contact } from "./Contact";
 
 export function Rdiv() {
   const [isVisible, setIsVisible] = useState<boolean>(false);
@@ -19,6 +21,8 @@ export function Rdiv() {
       <Home />
       <Projects />
       <Experience />
+      <Skills />
+      <Contact />
     </div>
   );
 }

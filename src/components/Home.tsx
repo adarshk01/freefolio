@@ -14,10 +14,10 @@ export function Home() {
         Passionate about creating intuitive and engaging user experiences.
         Specialize in transforming ideas into beautifully crafted products.
       </div>
-      <div className="mt-10 flex">
-        <Achieve count={3} tagLine={"YEARS OF EXPERIENCE & LEARNING"} />
+      <div className="mt-10 flex gap-16">
+        <Achieve count={3} tagLine={"YEARS OF EXPERIENCE"} />
         <Achieve count={5} tagLine="PROJECTS COMPLETED" />
-        <Achieve count={0} tagLine="READY TO COLLABORATE WORLDWIDE" />
+        <Achieve count={0} tagLine="READY TO COLLABORATE" />
       </div>
       <div className="h-fit w-96 bg-lime-400 p-5 rounded-xl mt-16 relative overflow-hidden">
         <div className="relative z-50">
@@ -53,8 +53,8 @@ export function Home() {
           <path
             d="M31.0765 27.2486C26.1015 26.7012 22.2413 26.4661 17.9912 29.1784C14.4117 31.4627 11.1985 34.3891 8.58691 37.738C4.29615 43.2402 0.336537 52.039 2.24142 59.2246C4.98617 69.5784 16.8366 73.6018 26.4625 74.5225C32.2991 75.0807 36.8134 76.705 42.0015 79.2989C47.4455 82.0208 52.9625 83.0126 59.0575 82.5448C75.1997 81.3059 86.5715 66.0366 97.7023 55.901C102.262 51.7489 106.83 47.1506 108.433 41.0086C110.209 34.2 109.841 28.1289 107.511 21.538C102.999 8.77718 89.8609 0.953284 76.6103 1.72494C63.5784 2.48385 54.9919 14.6445 45.2562 21.8461C38.9055 26.5438 33.3725 25.9365 26.0188 26.6718"
             stroke="stroke-green-400"
-            stroke-width="1.70404"
-            stroke-linecap="round"
+            strokeWidth="1.70404"
+            strokeLinecap="round"
           />
         </svg>
       </div>
