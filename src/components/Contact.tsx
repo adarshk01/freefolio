@@ -77,7 +77,7 @@ export function Contact() {
               setMsg(e.target.value);
             }}
             placeholder="Message"
-            className={`h-28  w-full min-w-[300px]  rounded-xl bg-[#353334]     pt-3  text-base pl-4 text-white   focus:outline-none focus:ring-2 focus:ring-lime-400   transition  duration-300  `}
+            className={`h-28  lg:w-full lg:min-w-[300px] w-[450px]  rounded-xl bg-[#353334]     pt-3  text-base pl-4 text-white   focus:outline-none focus:ring-2 focus:ring-lime-400   transition  duration-300  `}
           />
         </div>
       </div>

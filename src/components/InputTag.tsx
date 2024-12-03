@@ -6,7 +6,7 @@ interface propType {
 
 export function InputTag({ header, desc, updateState }: propType) {
   return (
-    <div>
+    <div className="mb-5">
       <div className="text-neutral-400 text-sm mb-2.5 font-light">{header}</div>
       <div className=" ">
         <input
@@ -15,7 +15,7 @@ export function InputTag({ header, desc, updateState }: propType) {
             updateState(e.target.value);
           }}
           placeholder={desc}
-          className={`h-10  w-full min-w-[330px]  rounded-xl bg-[#353334]     text-sm pl-4 text-white   focus:outline-none focus:ring-2 focus:ring-lime-400   transition  duration-300  `}
+          className={`h-10  lg:w-full lg:min-w-[330px] w-[450px]  rounded-xl bg-[#353334]     text-sm pl-4 text-white   focus:outline-none focus:ring-2 focus:ring-lime-400   transition  duration-300  `}
         />
       </div>
     </div>

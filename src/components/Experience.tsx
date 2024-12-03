@@ -15,6 +15,7 @@ export function Experience() {
         <ExpItem
           title="Tech Mahindra"
           desc="Led the development team in creating intuitive web and mobile applications, enhancing user experience and driving higher engagement."
+          duration="Aug 2021-Apr 2024"
         />
       </div>
     </div>

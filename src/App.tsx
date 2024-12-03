@@ -23,7 +23,7 @@ function App() {
       <div className="lg:grid lg:grid-cols-12 lg:mx-52 mx-2.5 h-full mt-16 lg:mt-0 relative lg:gap-24 xl:w-screen md:w[300px]">
         <div
           className={`lg:col-span-3 border bg-gray-100 border-stone-1000 rounded-2xl   overflow-hidden xl:sticky  w-fit text-nowrap px-7
-         inset-y-16   h-fit  pb-0 transition-all duration-[750ms] ease-out transform   mx-32 lg:mx-10  ${
+         inset-y-16   h-fit  pb-0 transition-all duration-[750ms] ease-out transform  mx-10  lg:mx-10  ${
            isVisible ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-3"
          }`}
         >
