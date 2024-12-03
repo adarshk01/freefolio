@@ -2,7 +2,7 @@ import pic from "../assets/round.png";
 import tech from "../assets/rocket-lunch.svg";
 export function Ldiv() {
   return (
-    <div className={`auto-rows-fr xl:h-full font-sans relative `}>
+    <div className={`auto-rows-fr xl:h-full font-sans relative`}>
       <div className="    ">
         <div className="lg:flex lg:justify-center relative  p-4 lg:p-0 z-10">
           <img className="lg:h-60 h-20 rounded-2xl  mt-5" src={pic} alt="" />{" "}

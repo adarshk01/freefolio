@@ -15,6 +15,10 @@ export function Contact() {
     setMsg("");
   };
 
+  function updateState() {
+    setStatus(false);
+  }
+
   const sendEmail = () => {
     const emailData = {
       name: name,
@@ -47,14 +51,14 @@ export function Contact() {
   return (
     <div className="relative">
       <h1 className="mt-28 ">
-        <div className="block  text-white text-8xl font-bold leading-none select-none">
+        <div className="   text-white lg:text-8xl text-4xl font-bold leading-none select-none  lg:flex-none flex justify-center lg:justify-start">
           LET'S WORK
         </div>
-        <div className="block text-neutral-700  text-8xl font-bold leading-none select-none">
+        <div className="  text-neutral-700  lg:text-8xl text-4xl font-bold leading-none select-none  lg:flex-none flex justify-center lg:justify-start">
           TOGETHER
         </div>
       </h1>
-      <div className="mt-10 flex gap-5 w-full">
+      <div className="mt-10 lg:flex gap-5 w-full">
         <InputTag header={"Name"} desc="Your Name" updateState={setName} />
         <InputTag
           header={"Email"}
@@ -88,6 +92,7 @@ export function Contact() {
             console.log(email);
             console.log(msg);
             sendEmail();
+            handleClear();
           }}
           className="bg-lime-400 
          hover:bg-lime-500  transition-all  duration-300 ease-in-out 
@@ -96,7 +101,7 @@ export function Contact() {
           Submit
         </button>
       </div>
-      <MailCard status={status} />
+      <MailCard status={status} updateState={updateState} />
     </div>
   );
 }

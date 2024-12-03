@@ -7,8 +7,8 @@ export function Achieve({ count, tagLine }: childProps) {
   return (
     <div>
       <div
-        className={`text-white font-bold ${
-          count ? "text-7xl" : "text-3xl text-wrap w-28 "
+        className={`text-white  font-bold  ${
+          count ? "lg:text-7xl text-5xl" : "text-3xl text-wrap w-28 "
         }`}
       >
         +{count != 0 ? count : "Coming Soon"}

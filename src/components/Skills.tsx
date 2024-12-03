@@ -5,10 +5,10 @@ export function Skills() {
   return (
     <div>
       <h1 className="mt-28 ">
-        <div className="block  text-white text-8xl font-bold leading-none select-none">
+        <div className="   text-white lg:text-8xl text-4xl font-bold leading-none select-none  lg:flex-none flex justify-center lg:justify-start">
           POWER
         </div>
-        <div className="block text-neutral-700  text-8xl font-bold leading-none select-none">
+        <div className="  text-neutral-700  lg:text-8xl text-4xl font-bold leading-none select-none  lg:flex-none flex justify-center lg:justify-start">
           STACK
         </div>
       </h1>

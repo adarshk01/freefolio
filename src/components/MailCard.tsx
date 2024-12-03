@@ -1,15 +1,18 @@
 interface propsType {
   status: boolean;
+  updateState: () => void;
 }
 
-export function MailCard({ status }: propsType) {
+export function MailCard({ status, updateState }: propsType) {
   return (
     <div
-      className={`transition ease-in duration-300 ${
-        status ? "opacity-100" : "opacity-0"
+      className={`transition ease-in-out duration-300 ${
+        status
+          ? "opacity-100 pointer-events-auto"
+          : "opacity-0 pointer-events-none"
       }`}
     >
-      <div className="absolute top-20 -left-24 bg-zinc-800 h-fit w-fit px-10 rounded-xl border border-lime-400">
+      <div className="fixed top-[3200px] -left-24 bg-zinc-800 h-fit w-fit px-10 rounded-xl border border-lime-400">
         <div className="flex my-10  gap-5">
           <div className="mt-2">
             <svg
@@ -34,6 +37,14 @@ export function MailCard({ status }: propsType) {
             <div className="text-sm text-zinc-600 dark:text-zinc-300 mt-1">
               I’ll get back to you as soon as I can. Thank you for reaching out!
             </div>
+          </div>
+        </div>
+        <div className="flex justify-end mb-2.5">
+          <div
+            className=" text-black bg-stone-500 px-2.5 py-1.5 rounded-lg cursor-pointer hover:bg-stone-600"
+            onClick={updateState}
+          >
+            close
           </div>
         </div>
       </div>

@@ -18,7 +18,7 @@ export function NavBar() {
 
   return (
     <div className=" ">
-      <div className="h-12 w-fit bg-zinc-900   px-5 rounded-xl flex items-center gap-7 opacity-50 hover:opacity-100 transition duration-500 ease-out">
+      <div className="h-12 w-fit bg-zinc-900   px-5 rounded-xl flex items-center gap-7 lg:opacity-50 lg:hover:opacity-100 transition duration-500 ease-out">
         <div className="group" onClick={scrollToHome}>
           <svg
             xmlns="http://www.w3.org/2000/svg"

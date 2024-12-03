@@ -4,7 +4,6 @@ import { Projects } from "./Projects";
 import { Experience } from "./Experience";
 import { Skills } from "./Skills";
 import { Contact } from "./Contact";
-import { MailCard } from "./MailCard";
 
 export function Rdiv() {
   const [isVisible, setIsVisible] = useState<boolean>(false);
@@ -24,7 +23,6 @@ export function Rdiv() {
       <Experience />
       <Skills />
       <Contact />
-      <MailCard />
     </div>
   );
 }
