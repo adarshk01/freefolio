@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { InputTag } from "./InputTag";
 import emailjs from "@emailjs/browser";
 import { MailCard } from "./MailCard";
